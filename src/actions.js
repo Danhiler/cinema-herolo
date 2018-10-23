@@ -1,6 +1,6 @@
 export function getData(i) {
     return async (dispatch) => {
-        const res = await fetch('http://www.omdbapi.com/?apikey=2a7ff486&t='+String.fromCharCode(97 + Math.floor((Math.random() * 24) + 1)));
+        const res = await fetch('https://www.omdbapi.com/?apikey=2a7ff486&t='+String.fromCharCode(97 + Math.floor((Math.random() * 24) + 1)));
         const json = await res.json();
         dispatch({type:"ADD_NEW_MOVIE",data: json})
     }
