@@ -53,3 +53,6 @@ span.save-btn,span.cancel-btn {
     cursor: pointer;
     margin: 5px;
 }
+.smaller-popup.popupWindow{
+    height: 97px;
+}

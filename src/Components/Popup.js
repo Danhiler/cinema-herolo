@@ -40,7 +40,7 @@ class PopUp extends React.Component {
         }
     }
     showAreYyouSurePopup = () => {
-        return (<div className="popupWindow">
+        return (<div className="popupWindow smaller-popup">
             <span>Are you sure?</span>
             <div className="form-btns">
                 <span className="save-btn" onClick={this.handleDelete}>Yes</span>
