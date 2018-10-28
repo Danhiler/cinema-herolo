@@ -2,30 +2,30 @@ import React, { Component } from 'react';
 import Movie from './Components/Movie';
 import './App.css';
 import { connect } from "react-redux";
-import { getData, updateSelectedMovie } from "./actions"
+import { getData, updateSelectedMovie } from "./reduxActions"
 import Popup from './Components/Popup';
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
-    this.state={
-      activePopUp:"none"
+    this.state = {
+      activePopUp: "none"
     }
   }
-  changePopupState=(newState)=>{
-this.setState({activePopUp:newState})
+  changePopupState = (newState) => {
+    this.setState({ activePopUp: newState })
   }
   componentWillMount() {
-    for(let i=0;i<10;i++)
-    this.props.getData(i)
+    for (let i = 0; i < 10; i++)
+      this.props.getData(i)
   }
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          Welcome to Herolo Cinema 
+          Welcome to Herolo Cinema
         </header>
-          <i className="addMovie fas fa-plus-circle" onClick={this.handleCreateMovie}></i>
+        <i className="addMovie fas fa-plus-circle" onClick={this.handleCreateMovie}></i>
         <div className="main-content">
           {this.printMovies()}
         </div>
@@ -58,11 +58,11 @@ this.setState({activePopUp:newState})
     this.changePopupState("editMovie")
     this.props.updateSelectedMovie(movieObj)
   }
-  handleDeleteMovie=(movieID)=>{
+  handleDeleteMovie = (movieID) => {
     this.changePopupState("areYouSure")
     // this.props.deleteMovie(movieID)
   }
-  handleCreateMovie=()=>{
+  handleCreateMovie = () => {
     this.changePopupState("createMovie")
   }
 }

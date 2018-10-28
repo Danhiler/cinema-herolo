@@ -13,10 +13,13 @@ background-repeat: round;
 }
 .popupWindow {
     position: absolute;
-    left: 41%;
-    /* right: 25%; */
-    top: 25%;
-    /* bottom: 25%; */
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 300px;
+    height: 272px;
     border-radius: 6px;
     margin: auto;
     background: #282c34;
@@ -25,7 +28,7 @@ background-repeat: round;
     border: 5px solid orange;
 }
 .error-messege {
-    width: 361px;
+    width: 90%;
     border: 1px solid red;
     background-color: #db545494;
     margin: 3px auto;

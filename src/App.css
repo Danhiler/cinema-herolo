@@ -1,3 +1,8 @@
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
 .App {
   text-align: center;
   background-color: #282c34;
